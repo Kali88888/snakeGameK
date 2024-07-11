@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* Import custom font */
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('IMG_7408 (1).jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: 'Arial', sans-serif; /* Default font */
+        }
+        canvas {
+            border: 1px solid #000;
+            position: relative;
+            z-index: 1;
+        }
+        #score {
+    font-size: 24px; /* Adjusted font size */
+    margin-bottom: 15px; /* Reduced margin for closer alignment */
+    color: #F08080; /* Coral color */
+    font-family: 'Press Start 2P', sans-serif; /* Custom font */
+    text-transform: uppercase; /* Convert text to uppercase */
+}
+#highestScore {
+    font-size: 18px; /* Adjusted font size */
+    color: #F08080; /* Coral color */
+    font-family: 'Press Start 2P', sans-serif; /* Custom font */
+    margin-bottom: 20px; /* Increased margin for spacing */
+}
+#startButton {
+    margin-top: 10px;
+    padding: 15px 30px; /* Adjust padding to increase button size */
+    font-size: 18px; /* Increase font size */
+    cursor: pointer;
+    background-color: #F08080; /* Coral background */
+    color: #FFF; /* White text color */
+    border: none;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif; /* Default font */
+    font-weight: bold; /* Make text bold */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for 3D effect */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+#startButton:hover {
+    background-color: #D46A6A; /* Darker shade when hovered */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+        #pauseButton {
+            margin-top: 10px;
+    padding: 15px 30px; /* Adjust padding to increase button size */
+    font-size: 18px; /* Increase font size */
+    cursor: pointer;
+    background-color: #F08080;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif; /* Default font */
+        }
+        #pauseButton:hover {
+    background-color: #D46A6A; /* Darker shade when hovered */
+}
+    </style>
+</head> 
+<body>
+    <div id="score">Score: 0</div>
+    <div id="highestScore">Highest Score: 0</div>
+    <canvas id="gameCanvas" width="900" height="600"></canvas>
+    <button id="startButton">Start Game</button>
+    <button id="pauseButton">Pause Game</button> <!--Added pause button -->   
+    <script src="snake.js"></script>
+</body>
+
+</html>
